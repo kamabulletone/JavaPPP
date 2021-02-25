@@ -1,6 +1,7 @@
 package com.ru.pr14;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +11,12 @@ import java.util.List;
 
 @Controller
 public class TeamController {
+    @Autowired
+    Service service;
+
     List<Team> teams = null;
+
+
 
     @RequestMapping(value = "/home/createTeam", method = RequestMethod.POST)
     public void createTeam(@RequestBody Team team) {
@@ -45,6 +51,6 @@ public class TeamController {
     @ResponseBody
     @RequestMapping(value = "/home/getTeams", method = RequestMethod.GET)
     public List<Team> getTeams() {
-        return teams;
+        return service.getTeams();
     }
 }
