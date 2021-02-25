@@ -1,7 +1,12 @@
 package com.ru.pr14;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Footballer {
+    @JsonProperty("fname")
     private String firstName;
+
+    @JsonProperty("flname")
     private String lastName;
 
     public Footballer(String firstName, String lastName) {
