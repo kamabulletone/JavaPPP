@@ -12,7 +12,7 @@ public class FootballerController {
 
     List<Footballer> footballers = null;
 
-    @RequestMapping(value = "/home/createTeam", method = RequestMethod.POST)
+    @RequestMapping(value = "/home/createFootballer", method = RequestMethod.POST)
     public void createFootballer(@RequestBody Footballer footballer) {
         System.out.println("I'm in");
         if (footballers == null) {
@@ -30,7 +30,7 @@ public class FootballerController {
             footballers.remove(footballer);
         }
         else {
-            System.out.println("No footbalelr");
+            System.out.println("No footballer");
         }
 
     }
