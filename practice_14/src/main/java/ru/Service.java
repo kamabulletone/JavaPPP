@@ -32,6 +32,7 @@ public class Service {
         a = new ArrayList<AllFunc>();
     }
     @RequestMapping(value = "/home/out", method = RequestMethod.GET)
+    @ResponseBody
     public ArrayList<AllFunc> out() {
         return a;
     }

@@ -82,9 +82,7 @@ public class SynchronizedList<E> implements List<E> {
     }
 
     @Override
-    public synchronized void clear() {
-
-    }
+    public synchronized void clear(){ }
 
     @Override
     public synchronized E set(int index, E element) {
