@@ -4,11 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 @Controller
 public class Service {
-    ArrayList<AllFunc> a;
+    List<AllFunc> a = new ArrayList<AllFunc>();
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String getTestPage() {
@@ -17,14 +18,14 @@ public class Service {
 
     @RequestMapping(value = "/home/createitem", method = RequestMethod.POST)
     @ResponseBody
-    public void createitem(@RequestBody String name,@RequestBody String creationDate,@RequestBody int price) {
-        a.add(new Item(name,creationDate,price));
+    public void createitem(@RequestBody Item w) {
+        a.add(w);
     }
 
     @RequestMapping(value = "/home/createorder", method = RequestMethod.POST)
     @ResponseBody
-    public void createorder(@RequestBody String orderDate) {
-        a.add(new Order(orderDate));
+    public void createorder(@RequestBody Order w) {
+        a.add(w);
     }
 
     @RequestMapping(value = "/home/delete", method = RequestMethod.GET)
@@ -33,7 +34,7 @@ public class Service {
     }
     @RequestMapping(value = "/home/out", method = RequestMethod.GET)
     @ResponseBody
-    public ArrayList<AllFunc> out() {
+    public List<AllFunc> out() {
         return a;
     }
 

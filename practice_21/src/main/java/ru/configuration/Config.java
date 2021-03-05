@@ -1,5 +1,6 @@
 package ru.configuration;
 
+import lombok.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -17,14 +18,16 @@ import java.util.Properties;
 @EnableAspectJAutoProxy
 @EnableScheduling
 public class Config {
+
+
     @Bean
     public JavaMailSender getJavaMailSender() {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
         mailSender.setHost("smtp.gmail.com");
         mailSender.setPort(587);
 
-        mailSender.setUsername("tinley9715@gmail.com");
-        mailSender.setPassword("stvzechutomtldbo");
+        mailSender.setUsername("nope");
+        mailSender.setPassword("nope");
 
         Properties props = mailSender.getJavaMailProperties();
         props.put("mail.transport.protocol", "smtp");
