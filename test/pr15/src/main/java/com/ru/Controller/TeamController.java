@@ -1,7 +1,9 @@
-package com.ru.pr14.Controller;
+package com.ru.Controller;
 
 
-import com.ru.pr14.Model.Team;
+import com.ru.Model.Team;
+import com.ru.Service.TeamService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,15 +13,21 @@ import java.util.List;
 @Controller
 public class TeamController {
 
+    @Autowired
+    TeamService teamService;
+
     List<Team> teams = null;
 
-    @RequestMapping(value = "/home/createTeam", method = RequestMethod.POST)
+    @ResponseBody
+    @RequestMapping(value = "/home/createteam", method = RequestMethod.POST)
     public void createTeam(@RequestBody Team team) {
-        System.out.println("I'm in");
-        if (teams == null) {
-            teams = new ArrayList<Team>();
-        }
-        teams.add(team);
+//        System.out.println("I'm in");
+//        if (teams == null) {
+//            teams = new ArrayList<Team>();
+//        }
+//        teams.add(team);
+        teamService.addTeam(team);
+
         System.out.println(teams.toString());
 
     }

@@ -1,7 +1,9 @@
-package com.ru.pr14.Controller;
+package com.ru.Controller;
 
 
-import com.ru.pr14.Model.Footballer;
+import com.ru.Model.Footballer;
+import com.ru.Service.TeamService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,16 +12,19 @@ import java.util.List;
 
 @Controller
 public class FootballerController {
+    @Autowired
+    TeamService teamService;
 
     List<Footballer> footballers = null;
 
     @RequestMapping(value = "/home/createFootballer", method = RequestMethod.POST)
     public void createFootballer(@RequestBody Footballer footballer) {
-        System.out.println("I'm in");
-        if (footballers == null) {
-            footballers = new ArrayList<Footballer>();
-        }
-        footballers.add(footballer);
+//        System.out.println("I'm in");
+//        if (footballers == null) {
+//            footballers = new ArrayList<Footballer>();
+//        }
+//        footballers.add(footballer);
+
         System.out.println(footballers.toString());
 
     }

@@ -1,4 +1,4 @@
-package com.ru.pr14.Controller;
+package com.ru.Controller;
 
 
 import org.springframework.stereotype.Controller;

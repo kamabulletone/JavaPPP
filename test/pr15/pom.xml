@@ -8,15 +8,15 @@
 		<version>2.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ru</groupId>
-	<artifactId>pr15</artifactId>
+	<groupId>com</groupId>
+	<artifactId>ru</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>pr15</name>
-	<description>Demo project for Spring Boot</description>
+
 	<properties>
 		<java.version>15</java.version>
 	</properties>
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -46,7 +46,16 @@
 			<artifactId>postgresql</artifactId>
 			<version>42.2.18</version>
 		</dependency>
-		 https://mvnrepository.com/artifact/com.zaxxer/HikariCP
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>5.1.6.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>com.zaxxer</groupId>
 			<artifactId>HikariCP</artifactId>
@@ -69,9 +78,9 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+<!--			<plugin>-->
+<!--				<groupId>org.springframework.boot</groupId>-->
+<!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
 <!--				<configuration>-->
 <!--					<excludes>-->
 <!--						<exclude>-->
@@ -80,7 +89,7 @@
 <!--						</exclude>-->
 <!--					</excludes>-->
 <!--				</configuration>-->
-			</plugin>
+<!--			</plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
