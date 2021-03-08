@@ -28,7 +28,7 @@ public class TeamController {
 //        teams.add(team);
         teamService.addTeam(team);
 
-        System.out.println(teams.toString());
+       // System.out.println(teams.toString());
 
     }
 
