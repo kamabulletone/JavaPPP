@@ -1,4 +1,4 @@
-package com.ru.pr14;
+package com.ru.pr14.Configuration;
 
 //import com.zaxxer.hikari.HikariConfig;
 //import com.zaxxer.hikari.HikariDataSource;

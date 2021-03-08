@@ -1,4 +1,4 @@
-package com.ru.pr14;
+package com.ru.pr14.Model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
