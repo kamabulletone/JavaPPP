@@ -65,6 +65,7 @@ public class Item {
                 "name='" + name + '\'' +
                 ", creationDate='" + creationDate + '\'' +
                 ", price=" + price +
+                ", orders=" + orders +
                 '}';
     }
 }

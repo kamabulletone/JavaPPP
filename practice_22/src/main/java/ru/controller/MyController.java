@@ -9,10 +9,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import ru.model.Item;
 import ru.model.Order;
-import ru.services.EmailService;
+import ru.extraservices.EmailService;
 import ru.services.ItemService;
 import ru.services.OrderService;
-import ru.services.ShedulerService;
 
 import java.util.List;
 
@@ -38,14 +37,14 @@ public class MyController {
     @RequestMapping(value = "/home/createitem", method = RequestMethod.POST)
     @ResponseBody
     public void createItem(@RequestBody Item w) {
-        m.sendEmailItem();
+        m.sendEmailItem(w);
         a.insertItem(w);
     }
 
     @RequestMapping(value = "/home/createorder", method = RequestMethod.POST)
     @ResponseBody
     public void createOrder(@RequestBody Order w) {
-        m.sendEmailOrder();
+        m.sendEmailOrder(w);
         b.insertOrder(w);
     }
 

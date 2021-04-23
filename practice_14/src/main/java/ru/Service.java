@@ -32,6 +32,7 @@ public class Service {
     public void del() {
         a = new ArrayList<AllFunc>();
     }
+
     @RequestMapping(value = "/home/out", method = RequestMethod.GET)
     @ResponseBody
     public List<AllFunc> out() {

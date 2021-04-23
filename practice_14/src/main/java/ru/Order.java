@@ -6,8 +6,7 @@ public class Order implements AllFunc{
     @JsonProperty("orderDate")
     public String orderDate;
 
-    public Order() {
-    }
+    public Order() {}
 
     public void setOrderDate(String orderDate) {
         this.orderDate = orderDate;
